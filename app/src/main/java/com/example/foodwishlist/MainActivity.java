@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void chooseIcon(View view) {
+        saveData();
         boolean filled = true;
         if (TextUtils.isEmpty(inputNamaMakanan.getText())) {
             inputNamaMakanan.setError("Tulis nama makanan");
