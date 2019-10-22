@@ -90,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void chooseIcon(View view) {
-        saveData();
         boolean filled = true;
         if (TextUtils.isEmpty(inputNamaMakanan.getText())) {
             inputNamaMakanan.setError("Tulis nama makanan");
@@ -114,5 +113,17 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(intent, 1);
         }
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        saveData();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        saveData();
     }
 }

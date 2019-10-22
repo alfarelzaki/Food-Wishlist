@@ -68,6 +68,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder>{
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
                                         values.remove(data);
+
                                         notifyDataSetChanged();
                                     }
                                 })
